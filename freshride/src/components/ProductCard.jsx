@@ -1,6 +1,8 @@
 import './ProductCard.css'
 
-function ProductCard({ name, price, image, description }) {
+function ProductCard({ product, onAddToCart }) {
+  const { name, price, image, description } = product
+
   const formattedPrice = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -13,7 +15,12 @@ function ProductCard({ name, price, image, description }) {
         <p className="product-type">Vent clip fragrance</p>
         <h3 className="product-name">{name}</h3>
         <p className="product-description">{description}</p>
-        <p className="product-price">{formattedPrice}</p>
+        <div className="product-footer">
+          <p className="product-price">{formattedPrice}</p>
+          <button className="add-to-cart" type="button" onClick={() => onAddToCart(product)}>
+            Add to Cart
+          </button>
+        </div>
       </div>
     </article>
   )

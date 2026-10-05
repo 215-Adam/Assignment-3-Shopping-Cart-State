@@ -47,3 +47,43 @@
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   }
 }
+
+.cart-section {
+  margin-top: 72px;
+  scroll-margin-top: 28px;
+}
+
+.cart-panel,
+.cart-empty {
+  max-width: 560px;
+  padding: 8px 24px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.cart-empty {
+  padding: 24px;
+  color: var(--muted);
+}
+
+.cart-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Total row: bold, with a heavier divider above it. */
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 2px solid var(--pine);
+  color: var(--pine-deep);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cart-list + .cart-total {
+  margin-top: -1px;
+}

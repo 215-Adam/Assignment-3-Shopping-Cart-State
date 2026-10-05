@@ -1,6 +1,6 @@
 import './Header.css'
 
-function Header({ storeName }) {
+function Header({ storeName, cartCount }) {
 	return (
 		<header className="site-header">
 			<a className="store-brand" href="#top" aria-label={`${storeName} home`}>
@@ -11,6 +11,10 @@ function Header({ storeName }) {
 				<a href="#shop">Shop scents</a>
 				<a href="#approach">Our approach</a>
 				<a href="#contact">Contact</a>
+				<a className="cart-container" href="#cart" aria-label={`Cart, ${cartCount} items`}>
+					<span className="cart-icon">🛒</span>
+					<span className="cart-count">{cartCount}</span>
+				</a>
 			</nav>
 		</header>
 	)

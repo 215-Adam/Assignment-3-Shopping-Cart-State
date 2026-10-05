@@ -65,3 +65,31 @@
 		transform: none;
 	}
 }
+
+.product-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.add-to-cart {
+	padding: 9px 16px;
+	border: 0;
+	border-radius: 4px;
+	background: var(--pine);
+	color: #fff;
+	font: inherit;
+	font-size: 13px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background-color 150ms ease;
+}
+
+.add-to-cart:hover {
+	background: var(--pine-deep);
+}
+
+.add-to-cart:active {
+	transform: translateY(1px);
+}
